@@ -1,0 +1,29 @@
+{
+  "name": "Angular 7 app + Webpack 4",
+  "version": "1.0.0",
+  "description": "How to setup an Angular 7 application with webpack 4 from scratch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samteb/Angular-7-Webpack-4.git"
+  },
+  "author": "samteb",
+  "license": "MIT",
+  "homepage": "https://github.com/samteb/Angular-7-Webpack-4",
+  "dependencies": {
+    "@angular/animations": "~7.0",
+    "@angular/common": "~7.0",
+    "@angular/compiler": "~7.0",
+    "@angular/compiler-cli": "~7.0",
+    "@angular/core": "~7.0",
+    "@angular/forms": "~7.0",
+    "@angular/http": "~7.0",
+    "@angular/platform-browser": "~7.0",
+    "@angular/platform-browser-dynamic": "~7.0",
+    "@angular/platform-server": "~7.0",
+    "@angular/router": "~7.0",
+    "@angular/upgrade": "~7.0",
+    "core-js": "~2.5",
+    "rxjs": "~6.3",
+    "zone.js": "~0.8"
+  }
+}
