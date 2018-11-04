@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    name = 'Samuel';
+    name = 'Angular 7 & Webpack 4';
 }

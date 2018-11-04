@@ -18,13 +18,7 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     optimization: {
-        noEmitOnErrors: true,
-        splitChunks: {
-            name: 'vendor',
-            minChunks: 2
-        },
-        namedModules: true,
-        concatenateModules: true
+        noEmitOnErrors: true
     },
 
     module: {
@@ -42,14 +36,6 @@ module.exports = webpackMerge(commonConfig, {
                     'angular2-template-loader',
                     'angular-router-loader'
                 ],
-                exclude: [/node_modules/]
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/babel-preset-env']
-                },
                 exclude: [/node_modules/]
             }
         ]
