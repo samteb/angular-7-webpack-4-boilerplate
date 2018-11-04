@@ -25,5 +25,13 @@
     "core-js": "~2.5",
     "rxjs": "~6.3",
     "zone.js": "~0.8"
+  },
+  "devDependencies": {
+    "@types/core-js": "~2.5",
+    "@types/node": "~10.12",
+    "webpack": "~4.23",
+    "webpack-cli": "~3.1",
+    "webpack-dev-server": "~3.1",
+    "webpack-merge": "~4.1"
   }
 }
