@@ -13,6 +13,6 @@
   },
   "exclude": [
     "node_modules",
-    "src/main.aot.ts"
+    "src/main.ts"
   ]
 }

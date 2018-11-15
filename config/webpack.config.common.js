@@ -4,12 +4,13 @@ const CleanWebpackPlugin   = require('clean-webpack-plugin');
 const HtmlWebpackPlugin    = require('html-webpack-plugin');
 
 const helpers              = require('./helpers');
+const isDev                = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
         vendor: './src/vendor.ts',
         polyfills: './src/polyfills.ts',
-        main: './src/main.ts'
+        main: isDev ? './src/main.ts' : './src/main.aot.ts'
     },
 
     resolve: {

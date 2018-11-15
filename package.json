@@ -4,7 +4,11 @@
   "description": "How to setup an Angular 7 application with webpack 4 from scratch",
   "scripts": {
     "webpack-dev": "cross-env NODE_ENV=development webpack --mode development",
-    "build:dev": "webpack-dev-server --inline --hot --progress --port 8080"
+    "webpack-prod": "cross-env NODE_ENV=production webpack --mode production",
+    "build:dev": "webpack-dev-server --inline --hot --progress --port 8080",
+    "build:prod": "npm run build:clean && ngc && npm run webpack-prod && npm run build:clean",
+    "build:clean": "del-cli 'src/**/*.js' 'src/**/*.js.map' 'src/**/*.ngsummary.json' 'src/**/*.metadata.json' 'src/**/**/*.ngfactory.ts' 'src/**/*.ngstyle.ts' 'src/**/*.shim.ts'",
+    "serve": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -31,6 +35,7 @@
     "zone.js": "~0.8"
   },
   "devDependencies": {
+    "@ngtools/webpack": "~7.0",
     "@types/core-js": "~2.5",
     "@types/node": "~10.12",
     "angular-router-loader": "~0.8",
@@ -43,12 +48,17 @@
     "clean-webpack-plugin": "~0.1",
     "cross-env": "~5.2",
     "css-loader": "~1.0",
+    "cssnano": "~4.1",
+    "del-cli": "~1.1",
     "html-loader": "~0.5",
     "html-webpack-plugin": "~3.2",
+    "lite-server": "~2.4",
     "node-sass": "~4.9",
+    "optimize-css-assets-webpack-plugin": "~5.0",
     "sass-loader": "~7.1",
     "to-string-loader": "~1.1",
     "typescript": "~3.1",
+    "uglifyjs-webpack-plugin": "~2.0",
     "webpack": "~4.23",
     "webpack-cli": "~3.1",
     "webpack-dev-server": "~3.1",
