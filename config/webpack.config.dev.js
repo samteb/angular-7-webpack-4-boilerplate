@@ -26,7 +26,6 @@ module.exports = webpackMerge(commonConfig, {
             {
                 test: /\.ts$/,
                 loaders: [
-                    'babel-loader',
                     {
                         loader: 'awesome-typescript-loader',
                         options: {
