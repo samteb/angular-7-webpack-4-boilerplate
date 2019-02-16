@@ -1,7 +1,7 @@
 {
-  "name": "Angular-7-Webpack-4",
+  "name": "Angular-7-webpack-4-boilerplate",
   "version": "1.0.0",
-  "description": "How to setup an Angular 7 application with webpack 4 from scratch",
+  "description": "Angular 7 application with webpack 4 boilerplate",
   "scripts": {
     "webpack-dev": "cross-env NODE_ENV=development webpack --mode development",
     "webpack-prod": "cross-env NODE_ENV=production webpack --mode production",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/samteb/Angular-7-Webpack-4.git"
   },
-  "author": "samteb",
+  "author": "samteb <sam.teboul@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/samteb/Angular-7-Webpack-4",
   "dependencies": {
@@ -61,7 +61,7 @@
     "uglifyjs-webpack-plugin": "~2.0",
     "webpack": "~4.29",
     "webpack-cli": "~3.2",
-    "webpack-dev-server": "~3.1.14",
+    "webpack-dev-server": "^3.1.14",
     "webpack-merge": "~4.2"
   }
 }
