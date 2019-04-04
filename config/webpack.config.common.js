@@ -14,7 +14,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.scss']
     },
 
     module: {
@@ -26,9 +26,18 @@ module.exports = {
             {
                 test: /\.(scss|sass)$/,
                 use: [
+                    { loader: 'style-loader', options: { sourceMap: isDev } },
+                    { loader: 'css-loader', options: { sourceMap: isDev } },
+                    { loader: 'sass-loader', options: { sourceMap: isDev } }
+                ],
+                include: helpers.root('src', 'assets')
+            },
+            {
+                test: /\.(scss|sass)$/,
+                use: [
                     'to-string-loader',
-                    { loader: 'css-loader', options: { sourceMap: true } },
-                    { loader: 'sass-loader', options: { sourceMap: true } }
+                    { loader: 'css-loader', options: { sourceMap: isDev } },
+                    { loader: 'sass-loader', options: { sourceMap: isDev } }
                 ],
                 include: helpers.root('src', 'app')
             }
